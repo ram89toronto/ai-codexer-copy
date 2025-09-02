@@ -1,0 +1,10 @@
+project_id = "rdzlbwjqltwnenvhfnsy"
+
+[functions.ai-chat]
+verify_jwt = true
+
+[functions.openai-code-generation]
+verify_jwt = true
+
+[functions.daytona-execute]
+verify_jwt = true
