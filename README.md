@@ -1,18 +1,11 @@
-# Welcome to your Lovable project
+# Welcome to your AICodex
 
-## Project info
 
-**URL**: https://lovable.dev/projects/0d816d04-2d63-47d7-82ec-51375ed0a932
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/0d816d04-2d63-47d7-82ec-51375ed0a932) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
@@ -62,12 +55,7 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/0d816d04-2d63-47d7-82ec-51375ed0a932) and click on Share -> Publish.
+Simply open and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
 
-Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
