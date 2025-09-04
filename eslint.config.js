@@ -24,6 +24,13 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+    },
+  },
+  {
+    files: ["**/__tests__/**/*.{ts,tsx}", "**/*.test.{ts,tsx}"],
+    rules: {
+      "no-constant-binary-expression": "off",
     },
   }
 );

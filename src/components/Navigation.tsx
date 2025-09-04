@@ -21,7 +21,7 @@ const Navigation = () => {
           {/* Logo */}
           <NavLink to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Code className="w-6 h-6 text-primary" />
-            <span className="font-bold text-xl">Codeflow</span>
+            <span className="font-bold text-xl">CodeAssist AI</span>
           </NavLink>
           
           {/* Navigation Links */}

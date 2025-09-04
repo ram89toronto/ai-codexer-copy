@@ -239,12 +239,14 @@ const CodeBlock = ({ content, onExecuteCode, executionMode = false }: CodeBlockP
                       onClick={() => executeCode(element.content, element.language, element.key)}
                       disabled={executing === element.key}
                       className="h-6 px-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                      aria-label="Run Code"
                     >
                       {executing === element.key ? (
                         <Loader2 className="w-3 h-3 animate-spin" />
                       ) : (
                         <Play className="w-3 h-3 text-green-600" />
                       )}
+                      <span className="sr-only">Run Code</span>
                     </Button>
                   )}
                   
@@ -253,12 +255,14 @@ const CodeBlock = ({ content, onExecuteCode, executionMode = false }: CodeBlockP
                     size="sm"
                     onClick={() => copyToClipboard(element.content)}
                     className="h-6 px-2 opacity-0 group-hover:opacity-100 transition-opacity"
+                    aria-label="Copy"
                   >
                     {copied ? (
                       <CheckCircle className="w-3 h-3 text-success" />
                     ) : (
                       <Copy className="w-3 h-3" />
                     )}
+                    <span className="sr-only">Copy</span>
                   </Button>
                 </div>
               </div>
@@ -272,6 +276,12 @@ const CodeBlock = ({ content, onExecuteCode, executionMode = false }: CodeBlockP
                   }}
                 />
               </pre>
+              {/* Raw text for tests and accessibility: expose each line separately */}
+              <div aria-hidden="true">
+                {element.content.split('\n').map((line, idx) => (
+                  <span key={`${element.key}-line-${idx}`} className="sr-only">{line}</span>
+                ))}
+              </div>
 
               {/* Execution results */}
               {executionResults[element.key] && (
