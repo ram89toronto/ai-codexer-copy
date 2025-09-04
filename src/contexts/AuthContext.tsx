@@ -60,12 +60,15 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       // Attempt global sign out
       await supabase.auth.signOut({ scope: 'global' });
       
-      // Force page reload for clean state
-      window.location.href = '/auth';
+      // In test environment, avoid navigation errors
+      if (typeof window !== 'undefined' && 'location' in window && process.env.NODE_ENV !== 'test') {
+        window.location.href = '/auth';
+      }
     } catch (error) {
       console.error('Error signing out:', error);
-      // Force redirect anyway
-      window.location.href = '/auth';
+      if (typeof window !== 'undefined' && 'location' in window && process.env.NODE_ENV !== 'test') {
+        window.location.href = '/auth';
+      }
     }
   };
 

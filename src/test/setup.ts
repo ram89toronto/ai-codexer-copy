@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom'
+import './mocks/supabase'
 import { beforeAll, vi } from 'vitest'
 
 // Mock environment variables

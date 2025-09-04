@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+    <main role="main" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 gradient-hero opacity-90"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-background/5 to-background/20"></div>
@@ -32,8 +32,7 @@ const Hero = () => {
         </h2>
         
         <p className="text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Get instant, context-aware coding solutions. Ask questions, receive precise code snippets, 
-          and accelerate your development workflow with cutting-edge AI.
+          Get instant help with coding
         </p>
         
         {/* Feature Highlights */}
@@ -42,7 +41,7 @@ const Hero = () => {
             <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mb-4">
               <Zap className="w-8 h-8 text-primary-glow" />
             </div>
-            <h3 className="text-white font-semibold mb-2">Lightning Fast</h3>
+            <h3 className="text-white font-semibold mb-2">Smart Code Generation</h3>
             <p className="text-white/70 text-sm">Get instant responses to your coding questions</p>
           </div>
           
@@ -50,7 +49,7 @@ const Hero = () => {
             <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mb-4">
               <Brain className="w-8 h-8 text-primary-glow" />
             </div>
-            <h3 className="text-white font-semibold mb-2">Context-Aware</h3>
+            <h3 className="text-white font-semibold mb-2">Real-time Execution</h3>
             <p className="text-white/70 text-sm">AI that understands your specific coding context</p>
           </div>
           
@@ -58,7 +57,7 @@ const Hero = () => {
             <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center mb-4">
               <Code className="w-8 h-8 text-primary-glow" />
             </div>
-            <h3 className="text-white font-semibold mb-2">Ready-to-Use</h3>
+            <h3 className="text-white font-semibold mb-2">Project Management</h3>
             <p className="text-white/70 text-sm">Copy-paste code that works in your projects</p>
           </div>
         </div>
@@ -73,7 +72,7 @@ const Hero = () => {
           <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </Button>
       </div>
-    </section>
+    </main>
   );
 };
 
